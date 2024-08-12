@@ -276,7 +276,7 @@ namespace UdemyMVC.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Topic")
+                    b.Property<string>("Topics")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -384,6 +384,28 @@ namespace UdemyMVC.Migrations
                     b.HasIndex("UserID");
 
                     b.ToTable("Instructors");
+                });
+
+            modelBuilder.Entity("UdemyMVC.Models.Topic", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<int>("ChapterID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("ChapterID");
+
+                    b.ToTable("Topics");
                 });
 
             modelBuilder.Entity("UdemyMVC.Models.User", b =>
@@ -559,6 +581,17 @@ namespace UdemyMVC.Migrations
                         .IsRequired();
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("UdemyMVC.Models.Topic", b =>
+                {
+                    b.HasOne("UdemyMVC.Models.Chapter", "Chapter")
+                        .WithMany()
+                        .HasForeignKey("ChapterID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Chapter");
                 });
 
             modelBuilder.Entity("UdemyMVC.Models.Course", b =>

@@ -13,16 +13,17 @@ namespace UdemyMVC
 			var builder = WebApplication.CreateBuilder(args);
 
 			// Add services to the container.
-			builder.Services.AddControllersWithViews();
-            builder.Services.AddScoped<ICourseRepository, CourseRepository>();
-            //Inject DataBase Connection 
-            builder.Services.AddDbContext<UdemyDataBase>(option =>
+			builder.Services.AddControllersWithViews(); 
+			//Inject DataBase Connection 
+			builder.Services.AddDbContext<UdemyDataBase>(option =>
 			{
 				option.UseSqlServer(builder.Configuration.GetConnectionString("cs")); 
 			});
 			//Inject UserManager,IdentityRole,SignInManager
 			builder.Services.AddIdentity<ApplicationModel, IdentityRole>()
-				.AddEntityFrameworkStores<UdemyDataBase>(); 
+				.AddEntityFrameworkStores<UdemyDataBase>();
+			//inject Repositories
+			builder.Services.AddScoped<IUserRepository, UserRepository>();
 			var app = builder.Build();
 
 			// Configure the HTTP request pipeline.
@@ -39,7 +40,7 @@ namespace UdemyMVC
 
 			app.MapControllerRoute(
 				name: "default",
-				pattern: "{controller=Home}/{action=Index}/{id?}");
+				pattern: "{controller=Account}/{action=Login}/{id?}");
 
 			app.Run();
 		}

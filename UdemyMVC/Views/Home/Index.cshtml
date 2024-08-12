@@ -2,7 +2,256 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+@section Styles {
+	<!--FontAwsome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="~/OwlCarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/OwlCarousel/owl.theme.default.min.css">
+    <link href="~/css/home.css" rel="stylesheet" />
+}
+
+<section class="w-100 mt-0">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://picsum.photos/1200/400.webp" class="d-block w-100" alt="Slide-1">
+            </div>
+            <div class="carousel-item">
+                <img src="https://picsum.photos/1200/400.webp" class="d-block w-100" alt="Slide-2">
+            </div>
+            <div class="carousel-item">
+                <img src="https://picsum.photos/1200/400.webp" class="d-block w-100" alt="Slide-3">
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- Logos Section -->
+<div class="owl-carousel logos owl-theme">
+    <img src="~/assets/images/Logos/logoipsum-214.svg" alt="logoipsum" />
+    <img src="~/assets/images/Logos/logoipsum-330.svg" alt="logoipsum" />
+    <img src="~/assets/images/Logos/logoipsum-261.svg" alt="logoipsum" />
+    <img src="~/assets/images/Logos/logoipsum-241.svg" alt="logoipsum" />
+    <img src="~/assets/images/Logos/logoipsum-321.svg" alt="logoipsum" />
+    <img src="~/assets/images/Logos/logoipsum-235.svg" alt="logoipsum" />
+    <img src="~/assets/images/Logos/logoipsum-244.svg" alt="logoipsum" />
+    <img src="~/assets/images/Logos/logoipsum-256.svg" alt="logoipsum" />
+    <img src="~/assets/images/Logos/logoipsum-259.svg" alt="logoipsum" />
+    <img src="~/assets/images/Logos/logoipsum-285.svg" alt="logoipsum" />
+    <img src="~/assets/images/Logos/logoipsum-288.svg" alt="logoipsum" />
 </div>
+
+
+<section class=" owl-carousel courses owl-theme">
+	<div class="card border bg-transparent">
+		<!-- Image -->
+		<img src="~/assets/images/Courses/14.jpg" class="card-img-top" alt="course image">
+		<!-- Card body -->
+		<div class="card-body">
+			<!-- Badge and favorite -->
+			<div class="d-flex justify-content-between mb-3">
+				<span class="hstack gap-2">
+					<a href="#" class="badge text-decoration-none bg-primary bg-opacity-10 text-primary">Development</a>
+					<a href="#" class="badge text-decoration-none bg-dark bg-opacity-10 text-dark">All level</a>
+				</span>
+				<!-- Favorite Icon -->
+				<a href="#" class="h6 fw-light text-decoration-none link-dark mb-0"><i class="far fa-bookmark"></i></a>
+			</div>
+			<!-- Title -->
+			<h5 class="card-title"><a href="#" class="text-decoration-none">Angular – The Complete Guide (2021 Edition)</a></h5>
+			<!-- Rating -->
+			<div class="d-flex justify-content-between mb-2">
+				<div class="hstack gap-2">
+					<p class="text-warning m-0">4.0<i class="fas fa-star text-warning ms-1"></i></p>
+					<span class="small">(3500)</span>
+				</div>
+				<div class="hstack gap-2">
+					<p class="h6 fw-light mb-0 m-0">4500</p>
+					<span class="small">(Student)</span>
+				</div>
+			</div>
+			<!-- Time -->
+			<div class="hstack gap-3">
+				<span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>12h 45m</span>
+				<span class="h6 fw-light mb-0"><i class="fas fa-table text-orange me-2"></i>65 lectures</span>
+			</div>
+		</div>
+		<!-- Card footer -->
+		<div class="card-footer pt-3 bg-transparent">
+			
+			<!-- Avatar and Price -->
+			<div class="d-flex justify-content-between align-items-center">
+				<!-- Avatar -->
+				<div class="d-flex align-items-center">
+					<div class="avatar avatar-sm">
+						<img class="avatar-img rounded-1" src="assets/images/avatar/04.jpg" alt="avatar">
+					</div>
+					<p class="mb-0 ms-2"><a href="#" class="h6 fw-light text-decoration-none link-dark mb-0">Billy Vasquez</a></p>
+				</div>
+				<!-- Price -->
+				<div>
+					<h4 class="text-success mb-0 item-show">$255</h4>
+					<a href="#" class="btn btn-sm btn-success-soft item-show-hover"><i class="fas fa-shopping-cart me-2"></i>Add to cart</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="card border bg-transparent">
+		<!-- Image -->
+		<img src="~/assets/images/Courses/14.jpg" class="card-img-top" alt="course image">
+		<!-- Card body -->
+		<div class="card-body">
+			<!-- Badge and favorite -->
+			<div class="d-flex justify-content-between mb-3">
+				<span class="hstack gap-2">
+					<a href="#" class="badge text-decoration-none bg-primary bg-opacity-10 text-primary">Development</a>
+					<a href="#" class="badge text-decoration-none bg-dark bg-opacity-10 text-dark">All level</a>
+				</span>
+				<a href="#" class="h6 fw-light text-decoration-none link-dark mb-0"><i class="far fa-bookmark"></i></a>
+			</div>
+			<!-- Title -->
+			<h5 class="card-title"><a href="#" class="text-decoration-none">Angular – The Complete Guide (2021 Edition)</a></h5>
+			<!-- Rating -->
+			<div class="d-flex justify-content-between mb-2">
+				<div class="hstack gap-2">
+					<p class="text-warning m-0">4.0<i class="fas fa-star text-warning ms-1"></i></p>
+					<span class="small">(3500)</span>
+				</div>
+				<div class="hstack gap-2">
+					<p class="h6 fw-light mb-0 m-0">4500</p>
+					<span class="small">(Student)</span>
+				</div>
+			</div>
+			<!-- Time -->
+			<div class="hstack gap-3">
+				<span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>12h 45m</span>
+				<span class="h6 fw-light mb-0"><i class="fas fa-table text-orange me-2"></i>65 lectures</span>
+			</div>
+		</div>
+		<!-- Card footer -->
+		<div class="card-footer pt-3 bg-transparent">
+			
+			<!-- Avatar and Price -->
+			<div class="d-flex justify-content-between align-items-center">
+				<!-- Avatar -->
+				<div class="d-flex align-items-center">
+					<div class="avatar avatar-sm">
+						<img class="avatar-img rounded-1" src="assets/images/avatar/04.jpg" alt="avatar">
+					</div>
+					<p class="mb-0 ms-2"><a href="#" class="h6 fw-light text-decoration-none link-dark mb-0">Billy Vasquez</a></p>
+				</div>
+				<!-- Price -->
+				<div>
+					<h4 class="text-success mb-0 item-show">$255</h4>
+					<a href="#" class="btn btn-sm btn-success-soft item-show-hover"><i class="fas fa-shopping-cart me-2"></i>Add to cart</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="card border bg-transparent">
+		<!-- Image -->
+		<img src="~/assets/images/Courses/14.jpg" class="card-img-top" alt="course image">
+		<!-- Card body -->
+		<div class="card-body">
+			<!-- Badge and favorite -->
+			<div class="d-flex justify-content-between mb-3">
+				<span class="hstack gap-2">
+					<a href="#" class="badge text-decoration-none bg-primary bg-opacity-10 text-primary">Development</a>
+					<a href="#" class="badge text-decoration-none bg-dark bg-opacity-10 text-dark">All level</a>
+				</span>
+				<a href="#" class="h6 fw-light text-decoration-none link-dark mb-0"><i class="far fa-bookmark"></i></a>
+			</div>
+			<!-- Title -->
+			<h5 class="card-title"><a href="#" class="text-decoration-none">Angular – The Complete Guide (2021 Edition)</a></h5>
+			<!-- Rating -->
+			<div class="d-flex justify-content-between mb-2">
+				<div class="hstack gap-2">
+					<p class="text-warning m-0">4.0<i class="fas fa-star text-warning ms-1"></i></p>
+					<span class="small">(3500)</span>
+				</div>
+				<div class="hstack gap-2">
+					<p class="h6 fw-light mb-0 m-0">4500</p>
+					<span class="small">(Student)</span>
+				</div>
+			</div>
+			<!-- Time -->
+			<div class="hstack gap-3">
+				<span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>12h 45m</span>
+				<span class="h6 fw-light mb-0"><i class="fas fa-table text-orange me-2"></i>65 lectures</span>
+			</div>
+		</div>
+		<!-- Card footer -->
+		<div class="card-footer pt-3 bg-transparent">
+			
+			<!-- Avatar and Price -->
+			<div class="d-flex justify-content-between align-items-center">
+				<!-- Avatar -->
+				<div class="d-flex align-items-center">
+					<div class="avatar avatar-sm">
+						<img class="avatar-img rounded-1" src="assets/images/avatar/04.jpg" alt="avatar">
+					</div>
+					<p class="mb-0 ms-2"><a href="#" class="h6 fw-light text-decoration-none link-dark mb-0">Billy Vasquez</a></p>
+				</div>
+				<!-- Price -->
+				<div>
+					<h4 class="text-success mb-0 item-show">$255</h4>
+					<a href="#" class="btn btn-sm btn-success-soft item-show-hover"><i class="fas fa-shopping-cart me-2"></i>Add to cart</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+<section class="pt-0 pt-lg-5">
+	<div class="container position-relative">
+		<!-- SVG decoration START -->
+		<figure class="position-absolute top-50 start-50 translate-middle ms-2">
+			<svg>
+				<path class="fill-white opacity-4" d="m496 22.999c0 10.493-8.506 18.999-18.999 18.999s-19-8.506-19-18.999 8.507-18.999 19-18.999 18.999 8.506 18.999 18.999z"></path>
+				<path class="fill-white opacity-4" d="m775 102.5c0 5.799-4.701 10.5-10.5 10.5-5.798 0-10.499-4.701-10.499-10.5 0-5.798 4.701-10.499 10.499-10.499 5.799 0 10.5 4.701 10.5 10.499z"></path>
+				<path class="fill-white opacity-4" d="m192 102c0 6.626-5.373 11.999-12 11.999s-11.999-5.373-11.999-11.999c0-6.628 5.372-12 11.999-12s12 5.372 12 12z"></path>
+				<path class="fill-white opacity-4" d="m20.499 10.25c0 5.66-4.589 10.249-10.25 10.249-5.66 0-10.249-4.589-10.249-10.249-0-5.661 4.589-10.25 10.249-10.25 5.661-0 10.25 4.589 10.25 10.25z"></path>
+			</svg>
+		</figure>
+		<!-- SVG decoration END -->
+
+		<div class="row">
+			<div class="col-12">
+				<div class="bg-info p-4 p-sm-5 rounded-3">
+					<div class="row position-relative">
+						<!-- Svg decoration -->
+						<figure class="fill-white opacity-1 position-absolute top-50 start-0 translate-middle-y">
+							<svg width="141px" height="141px">
+								<path d="M140.520,70.258 C140.520,109.064 109.062,140.519 70.258,140.519 C31.454,140.519 -0.004,109.064 -0.004,70.258 C-0.004,31.455 31.454,-0.003 70.258,-0.003 C109.062,-0.003 140.520,31.455 140.520,70.258 Z"></path>
+							</svg>
+						</figure>
+						<!-- Action box -->
+						<div class="col-11 mx-auto position-relative">
+							<div class="row align-items-center">
+								<!-- Title -->
+								<div class="col-lg-7">
+									<h3 class="text-white">Become an Instructor!</h3>
+									<p class="text-white mb-3 mb-lg-0">Speedily say has suitable disposal add boy. On forth doubt miles of child. Exercise joy man children rejoiced. Yet uncommonly his ten who diminution astonished.</p>
+								</div>
+								<!-- Content and input -->
+								<div class="col-lg-5 text-lg-end">
+									<a href="#" class="btn btn-outline-warning mb-0">Start Teaching Today</a>
+								</div>
+							</div>
+						</div>
+					</div> 
+				</div>
+			</div>
+		</div> 
+	</div>
+</section>
+
+@section Scripts {
+    <script src="~/OwlCarousel/owl.carousel.min.js"></script>
+    <script src="~/js/home.js"></script>
+}

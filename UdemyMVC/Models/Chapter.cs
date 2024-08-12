@@ -8,7 +8,8 @@ namespace UdemyMVC.Models
 		[Key]
 		public int ID { get; set; } 
 		public string Title { get; set; }
-		public string Topic { get; set; }
+		[InverseProperty("ChapterID")]
+		public List<string> Topics { get; set; }
 		[ForeignKey("CourseId")]
 		public int CourseId { get; set; } // Foreign key
 		public Course Course { get; set; } // Navigation property

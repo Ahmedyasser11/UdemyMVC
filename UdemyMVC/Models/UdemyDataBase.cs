@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System.Threading;
 
 namespace UdemyMVC.Models
 {
@@ -15,10 +14,10 @@ namespace UdemyMVC.Models
 		public DbSet<CategoryCourse> CategoryCourses { get; set; }
 		public DbSet<Chapter> chapters { get; set; } 
 		public DbSet<CourseRate>CourseRates { get; set; }	
+		public DbSet<Topic> Topics { get; set; }
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-			
-            optionsBuilder.UseSqlServer("Server=localhost\\MSSQLSERVER01;Database=UdemyDataBase;Trusted_Connection=True;Encrypt=False");
+			optionsBuilder.UseSqlServer("Server=AHMED\\SQLEXPRESS;Database=UdemyDataBase;Trusted_Connection=True;trustServerCertificate=true");
 			base.OnConfiguring(optionsBuilder);
 		}
 		protected override void OnModelCreating(ModelBuilder modelBuilder)

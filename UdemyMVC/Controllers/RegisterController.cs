@@ -43,7 +43,7 @@ namespace UdemyMVC.Controllers
 		{
 			if (signInManager.IsSignedIn(User))
 			{ 
-			return RedirectToAction("Index", "Home");	
+				return RedirectToAction("Index", "Home");	
 			}
 				if (ModelState.IsValid)
 				{
@@ -92,7 +92,8 @@ namespace UdemyMVC.Controllers
 					user.RoleName = vm.Role;
 					context.Users.Add(user);
 					List<Claim> claims = new List<Claim>();
-					claims.Add(new Claim(ClaimTypes.NameIdentifier, user.ID));
+					claims.Add(new Claim(ClaimTypes.NameIdentifier, user.ID)); 
+		
 					await signInManager.SignInWithClaimsAsync(userModel, vm.RememberMe, claims);
 					context.SaveChanges();
 					return RedirectToAction("Index", "Home");
@@ -119,7 +120,7 @@ namespace UdemyMVC.Controllers
 			imageFile.CopyTo(filestream);
 					filestream.Close();
 				}
-				return $"/uploads/+{uniquePath}"; 
+				return $"/uploads/{uniquePath}"; 
 			}
 			return null;
 

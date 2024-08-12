@@ -1,0 +1,65 @@
+﻿/* wwwroot/css/profile.css */
+body {
+    background-color: #F4F7F6;
+    color: #333333;
+    font-family: Arial, sans-serif;
+}
+
+h1, h3, h4 {
+    color: #36975F;
+}
+
+.container {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-success {
+    background-color: #36975F;
+    border-color: #36975F;
+    color: #FFFFFF;
+}
+
+.btn-primary {
+    background-color: #36975F;
+    border-color: #36975F;
+    color: #FFFFFF;
+}
+
+.rounded-circle {
+    border: 4px solid #36975F;
+}
+
+.form-control {
+    border-color: #36975F;
+}
+
+    .form-control:focus {
+        border-color: #2d7a4c; 
+        box-shadow: 0 0 8px rgba(54, 151, 95, 0.5);
+    }
+
+.card {
+    border-color: #36975F;
+}
+
+
+
+.card-img-top {
+    border-bottom: 4px solid;
+}
+
+.card-body {
+    background-color: #FFFFFF;
+}
+
+.position-relative label {
+    background-color: #36975F;
+    color: #FFFFFF;
+}
+
+.text-muted {
+    color: #4d4d4d;
+}

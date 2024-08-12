@@ -4,9 +4,8 @@
     ViewData["Title"] = "Login";
 }
 
-<h1>Login</h1>
+<h1 class="d-flex justify-content-center">Login</h1>
 
-<h4>LoginViewModelcs</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -34,8 +33,9 @@
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
+<div class="align-item-center">
+    <p asp-action="Index">Haven't Register yet!</p> 
+    <a asp-controller="Register" asp-action="Register">Regist Now</a>
 </div>
 
 @section Scripts {
